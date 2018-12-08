@@ -6,7 +6,7 @@ namespace Hangfire.ConsoleHost
     {
         public static IServiceCollection AddHangfireHost(this IServiceCollection services)
         {
-            services.AddSingleton<IHangfireHost, HangfireHost>();
+            services.AddTransient<IHangfireHost, HangfireHost>();
 
             return services;
         }

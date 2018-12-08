@@ -16,8 +16,6 @@ namespace Hangfire.ConsoleHost
 
         public HangfireHost(IServiceProvider services)
         {
-            // Get LifeTime of Application Host
-            IApplicationLifetime lifetime = services.GetRequiredService<IApplicationLifetime>();
 
             // Hangfire Prerequesits
             JobStorage storage = services.GetRequiredService<JobStorage>();
@@ -31,10 +29,12 @@ namespace Hangfire.ConsoleHost
                 services.GetService<IBackgroundJobFactory>(),
                 services.GetService<IBackgroundJobPerformer>(),
                 services.GetService<IBackgroundJobStateChanger>());
+        }
 
-            // Register LifeTime
-            lifetime.ApplicationStopping.Register(() => BackgroundJobServer?.SendStop());
-            lifetime.ApplicationStopped.Register(() => BackgroundJobServer?.Dispose());
+        public void Dispose()
+        {
+            BackgroundJobServer?.SendStop();
+            BackgroundJobServer?.Dispose();
         }
     }
 }

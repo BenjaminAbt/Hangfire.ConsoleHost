@@ -1,8 +1,10 @@
 ﻿
+using System;
+
 namespace Hangfire.ConsoleHost
 {
-    public interface IHangfireHost
+    public interface IHangfireHost : IDisposable
     {
-        BackgroundJobServer BackgroundJobServer { get;  }
+        BackgroundJobServer BackgroundJobServer { get; }
     }
 }

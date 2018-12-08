@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{14AE2ECE-E73B-4511-B1C1-AEBCC8036BF2}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		azure-pipelines-steps.dotnet-nuget.yml = azure-pipelines-steps.dotnet-nuget.yml
 		LICENSE = LICENSE
 	EndProjectSection
 EndProject

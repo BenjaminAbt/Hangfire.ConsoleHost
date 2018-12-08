@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace Hangfire.ConsoleHost.Sample.Server
 {
-    public class MyHangfireApp : IHostedService
+    public class MyHangfireApp : IHostedService, IDisposable
     {
         private readonly IHangfireHost _hangfireHost;
         private readonly IDemoService _demoService;
@@ -30,6 +30,11 @@ namespace Hangfire.ConsoleHost.Sample.Server
         {
             Console.WriteLine("Stopping.");
             return Task.CompletedTask;
+        }
+
+        public void Dispose()
+        {
+            _hangfireHost?.Dispose();
         }
     }
 }
