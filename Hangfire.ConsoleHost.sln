@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.ConsoleHost.Sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.ConsoleHost.Sample.Common", "sample\Common\Hangfire.ConsoleHost.Sample.Common.csproj", "{6F0961DE-F31F-4CF0-94E5-31B609AD9A67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.ConsoleHost", "src\Hangfire.ConsoleHost\Hangfire.ConsoleHost.csproj", "{B86353DF-1877-42D7-A033-70D425AF330A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.ConsoleHost", "src\Hangfire.ConsoleHost\Hangfire.ConsoleHost.csproj", "{B86353DF-1877-42D7-A033-70D425AF330A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{14AE2ECE-E73B-4511-B1C1-AEBCC8036BF2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
