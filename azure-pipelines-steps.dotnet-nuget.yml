@@ -34,6 +34,13 @@ steps:
 
 ## Build Versioning
 
+- task: NuGetCommand@2
+  displayName: "NuGet Restore"
+  inputs:
+    restoreSolution: '**/*.csproj'
+    feedsToUse: config
+    nugetConfigPath: NuGet.config
+
 - task: DotNetCoreCLI@2
   displayName: ".NET build"
   inputs:
