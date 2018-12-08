@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <PackageId>Hangfire.ConsoleHost</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Benjamin Abt</Authors>
+    <Company>Benjamin Abt</Company>
+    <Title>Hangfire.ConsoleHost</Title>
+    <Description>Extension to run Hangfire with Dependency Injection in a .NET Core Host</Description>
+    <Copyright>Benjamin Abt 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/BenjaminAbt/Hangfire.ConsoleHost/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/BenjaminAbt/Hangfire.ConsoleHost</PackageProjectUrl>
+    <PackageTags>Hangfire;Console;Host</PackageTags>
+    <RepositoryUrl>https://github.com/BenjaminAbt/Hangfire.ConsoleHost.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.6.21" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+</Project>
