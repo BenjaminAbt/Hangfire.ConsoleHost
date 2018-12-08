@@ -7,7 +7,6 @@
 
   <PropertyGroup>
     <PackageId>Hangfire.ConsoleHost</PackageId>
-    <Version>0.0.1</Version>
     <Authors>Benjamin Abt</Authors>
     <Company>Benjamin Abt</Company>
     <Title>Hangfire.ConsoleHost</Title>
