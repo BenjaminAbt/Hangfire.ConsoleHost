@@ -11,7 +11,7 @@ jobs:
   pool:
     vmImage: vs2017-win2016
   steps:
-  - template: templates/azure-pipelines-steps.dotnet-nuget.yml  # Template reference
+  - template: azure-pipelines-steps.dotnet-nuget.yml  # Template reference
     parameters:
       gitVersionVersion: '4.0.0-beta0012'
       nugetVersion: '4.9.1'
