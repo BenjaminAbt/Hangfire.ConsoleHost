@@ -48,7 +48,7 @@ Use dependency injection in your impementation (and dont forget Dispose!)
     }
 ```
 
-You can find a full .NET Core console example based on `IHostedService` in a [sample](sample/Server/Program.cs)
+You can find a full .NET Core console example based on `IHostedService` [here](sample/Server/Program.cs)
 
 ## License
 
