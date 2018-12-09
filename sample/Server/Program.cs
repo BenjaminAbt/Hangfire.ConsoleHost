@@ -15,7 +15,6 @@ namespace Hangfire.ConsoleHost.Sample.Server
     {
         static async Task Main(string[] args)
         {
-
             IHostBuilder builder = new HostBuilder()
                 .ConfigureAppConfiguration((hostingContext, config) =>
                 {
@@ -50,7 +49,6 @@ namespace Hangfire.ConsoleHost.Sample.Server
                     // Services
                     services.AddTransient<IOutputPipe, ConsoleOutputpipe>();
                     services.AddTransient<IDemoService, DemoService>();
-
 
                     // Register Hangfire Host
                     services.AddHangfireHost();
