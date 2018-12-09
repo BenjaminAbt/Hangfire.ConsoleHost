@@ -12,6 +12,44 @@ Run Hangfire with Microsoft.Extensions.DependencyInjection in your .NET Core Con
 PM> Install-Package Hangfire.ConsoleHost
 ```
 
+## Usage
+
+Register transient `HangfireHost` with
+
+```csharp
+    // Register Hangfire Host
+    services.AddHangfireHost();
+```
+
+or add manually by
+
+```csharp
+    // Register Hangfire Host
+    services.AddTransient<IHangfireHost, HangfireHost>();
+```
+
+Use dependency injection in your impementation (and dont forget Dispose!)
+
+```csharp
+
+    public class MyHangfireApp : IDisposable
+    {
+        private readonly IHangfireHost _hangfireHost;
+
+        public MyHangfireApp(IHangfireHost hangfireHost)
+        {
+            _hangfireHost = hangfireHost;
+        }
+
+        public void Dispose()
+        {
+            _hangfireHost?.Dispose();
+        }
+    }
+```
+
+You can find a full .NET Core console example based on `IHostedService` in a [sample](sample/Server/Program.cs)
+
 ## License
 
 ```
