@@ -23,6 +23,9 @@ namespace Hangfire.ConsoleHost.Sample.Server
             string payload = DateTime.Now.ToLongTimeString();
             BackgroundJob.Enqueue(() => _demoService.LogAsync(payload));
 
+            // you can also write
+            // BackgroundJob.Enqueue<IDemoService>(demoService => demoService.LogAsync(payload));
+            
             return Task.CompletedTask;
         }
 
